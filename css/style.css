@@ -1,6 +1,71 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url(../font/Montserrat/Montserrat-ExtraLight.ttf) format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../font/Montserrat/Montserrat-Light.ttf) format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway/Raleway-Light.ttf) format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway/Raleway-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway/Raleway-Medium.ttf) format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway/Raleway-SemiBold.ttf) format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway/Raleway-Bold.ttf) format("truetype");
+    font-weight: 700;
+}
+
+@keyframes icon{
+  0% {transform: translateY(200px)}
+  100%{transform:translateY(0px)}
+}
+
+
+@keyframes brow-anim{
+  0% {transform: translateX(1200px)}
+  100%{transform:translateX(0px)}
+}
+
+
+
+@keyframes hover-anim{
+  0% {transform: scale(0.5)}
+  100%{transform: scale(1)}
+}
+
 * {
     margin: 0 auto;
     padding: 0;
+}
+
+header {
+    width: 1280px;
+    box-sizing: border-box;
 }
 
 main {
@@ -8,10 +73,22 @@ main {
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
-/*все что в хэдере*/
+.padding-site {
+    padding-left: 98px;
+    padding-right: 98px;
+}
+
+
+/*все что в первом блоке*/
 
 .slider {
+    width: 100%;
     height: 800px;
     background-image: url(../img/photo.png);
     position: relative;
@@ -24,29 +101,45 @@ main {
 .header {
     padding-top: 40px;
     width: 1280px;
+    display: flex;
 }
 
 .logo {
     text-decoration: none;
-    display: inline-block;
-    position: relative;
-}
-
-.logoimg {
-    float: left;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 190px;
+    text-decoration: none;
+    color: #fff;
 }
 
 .logo-txt {
-    width: 115px;
-    color: #ffffff;
     font-family: Raleway;
     font-size: 34px;
     font-weight: 400;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+    transition: color 300ms ease-out;
+}
+
+.logo:hover .logo-txt {
+    color: #c7b299;
+}
+
+.logo:active .logo-txt {
+    color: #c7b299;
+}
+
+.logoimg {
+    fill: #fff;
+    transition: fill 300ms ease-out;
+}
+
+.logo:hover .logoimg {
+    fill: #c7b299;
+}
+
+.logo:active .logoimg {
+    fill: #c7b299;
 }
 
 .menu {
@@ -66,11 +159,15 @@ main {
     font-weight: 300;
     text-decoration: none;
     padding: 20px 13px;
+    transition: color 300ms ease-out;
 }
 
 .menu-link:hover {
     color: #c7b299;
-    padding: 20px 13px;
+}
+
+.menu-link:active {
+    color: #c7b299;
 }
 
 .menu-link-active {
@@ -80,17 +177,51 @@ main {
     padding: 20px 13px;
     font-family: Montserrat;
 }
-.menu-link-svg{
+
+.menu-link-svg {
     margin-left: 20px;
-    fill:#ffffff;
+    fill: #ffffff;
+    transition: fill 300ms ease-out;
 }
-.menu-link-svg:hover{
-    fill:#c7b299;
+
+.menu-link-svg:hover {
+    fill: #c7b299;
 }
+
+form {
+  width: 25px;
+  height: 25px;
+    margin-left: 10px;
+}
+
+input[type="search"] {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  font-family: ;
+  font-size: ;
+  color: #fff;
+  text-transform: capitalize;
+  outline: none;
+  background-color: transparent;
+  background-image: url('../img/icon-search.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+    border: none;
+}
+
+input[type="search"]:focus {
+  width: 100px;
+  transition: width 300ms ease-out;
+  background-position: right;
+  background-image: url('');
+  border: 1px solid gray;
+}
+
 
 .slider-text {
     margin-top: 285px;
-    position: relative;
 }
 
 .slider-unique {
@@ -124,7 +255,7 @@ main {
     margin-bottom: 52px;
 }
 
-button {
+.btn-standart {
     width: 170px;
     height: 53px;
     outline: none;
@@ -142,21 +273,26 @@ button {
     line-height: 23px;
     display: block;
     cursor: pointer;
+    transition: transform 500ms;
+
 }
 
-button:focus {
+.btn-standart:focus {
     outline: none;
 }
 
-button:hover {
+.btn-standart:hover {
     box-shadow: inset 0 -3px 0 #584d42;
     background-color: #584d42;
+    transform: scale(1.3);
+    
 }
 
-button:active {
+.btn-standart:active {
     box-shadow: inset 0 -3px 0 #736357;
     background-color: #584d42;
 }
+
 
 .pagination {
     position: absolute;
@@ -172,6 +308,8 @@ button:active {
     background-color: #c7c7c7;
     border-radius: 50%;
     margin: 4px;
+    transition: background-color 300ms ease-out;
+
 }
 
 .pcircle-active {
@@ -186,11 +324,14 @@ button:active {
     background-color: #212121;
 }
 
+
+
 .pagination-left {
     position: absolute;
     left: 42px;
     text-align: center;
 }
+
 .pag-left {
     height: 11px;
     width: 11px;
@@ -201,12 +342,14 @@ button:active {
 }
 
 
-/*иконки первый блок*/
+/*иконки второй блок*/
 
 .icon-box1 {
     width: 270px;
     margin: 10px;
     text-align: center;
+    transition: transform 500ms ease-out;
+    animation: icon 2s 1 ease-in-out;
 }
 
 .icon-box1::after {
@@ -218,6 +361,7 @@ button:active {
     display: block;
     width: 100px;
     padding: 5px;
+    transition: transform 500ms ease-out;
 }
 
 .icon-box1:hover .icon-header {
@@ -226,14 +370,17 @@ button:active {
 
 .icon-box1:hover .icon-svg {
     fill: #c7b299;
+    transform: scale(1.4);
 }
 
 .icon-box1:hover::after {
     border-bottom: 1px solid #c7b299;
+    transform: scaleX(1.7);
 }
 
 .icon-svg {
     fill: #555555;
+    transition: transform 500ms;
 }
 
 .icon-header {
@@ -242,6 +389,7 @@ button:active {
     color: #555555;
     text-align: center;
     margin-top: 29px;
+    transition:  color 300ms ease-out;
 }
 
 .icon-content {
@@ -255,7 +403,6 @@ button:active {
     text-align: center;
     margin-top: 19px;
 }
-
 
 /*скриншоты страниц второй блок*/
 
@@ -281,14 +428,14 @@ button:active {
     display: block;
 }
 
-.screenshot {
-    width: 1280px;
-}
-
 .brow-left {
     position: absolute;
     left: 20px;
     bottom: 0px;
+}
+
+.brow-left:hover {
+    z-index: 101;
 }
 
 .brow-center {
@@ -296,6 +443,7 @@ button:active {
     bottom: 0px;
     z-index: 100;
     left: 230px;
+    animation: brow-anim 2s 1 ease-out;
 }
 
 .brow-right {
@@ -304,6 +452,9 @@ button:active {
     right: 10px;
 }
 
+.brow-right:hover {
+    z-index: 101;
+}
 
 /*коричневая полоска третий блок*/
 
@@ -332,6 +483,511 @@ font-family: Montserrat;
 font-size: 18px;
 font-weight: 300;
 }
+
+/*наведение четвертый блок*/
+
+.header-box-4 {
+    color: #555555;
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin-top: 81px;
+}
+
+.text-box-4 {
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    width: 757px;
+}
+
+.nav-box-4 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    width: 660px;
+}
+
+.link-nav {
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background: #fff;
+    transition: background-color 300ms ease-out;
+}
+
+.link-nav-active {
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Montserrat;
+    background-color: #998675;
+    box-sizing: border-box;
+    border: 1px solid #998675;
+    border-radius: 3px;
+}
+
+.link-nav:hover {
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #998675;
+    border: 1px solid #998675;
+}
+
+.hover-box {
+    display: flex;
+    width: 1170px;
+    flex-wrap: wrap;
+}
+
+.hover {
+    width: 370px;
+    background-color: #fbfaf8;
+    position: relative;
+    margin-bottom: 30px;
+    transition: background-color 500ms ease;
+    animation: hover-anim 1s 1 ease;
+
+}
+
+.hover:hover {
+    background-color: #362f2d;
+    transition: background-color 500ms ease, background-blend-mode 300ms ease, opacity 6000ms ease;
+}
+
+.hover:hover .text-hover-img {
+    background-color: #362f2d;
+}
+
+.hover:hover .text-hover-img::before {
+    border-bottom: 15px solid #362f2d;
+}
+
+.hover:hover .text1-hover-img {
+    color: #ffffff;
+}
+
+.hover:hover .text2-hover-img {
+    color: #c7b299;
+}
+
+.hover:hover .hover-link {
+    display: block;
+    position: absolute;
+    top: 106px;
+    left: 144px;
+}
+
+.hover:hover .hover-img {
+    background-color: #565657;
+    background-blend-mode: multiply;
+    opacity: 0.25;
+
+}
+
+.hover-link {
+    display: none;
+    position: absolute;
+
+}
+
+.svg-hover-link {
+    fill: #ffffff;
+}
+
+.svg-hover-link:hover {
+    fill: #c7b299;
+}
+
+.hover-img {
+    transition: background-color 500ms ease;
+}
+
+.text-hover-img {
+    background-color: #fbfaf8;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 27px;
+    transition: background-color 500ms ease;
+}
+
+.text-hover-img::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 15px solid #fbfaf8;
+    position: absolute;
+    top: -16px;
+    left: 19px;
+    transition: border-bottom 500ms ease;
+}
+
+.text1-hover-img {
+    color: #c7b299;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    line-height: 20px;
+}
+
+.text2-hover-img {
+    color: #d1d1d1;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 14px;
+    display: block;
+    line-height: 14px;
+}
+
+/*фоновое видео пятый блок*/
+
+.back-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+video[poster]{
+    height: 470px;
+}
+
+.video-layer {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 470px;
+    z-index: 5;
+}
+
+.play-video-btn{
+   display: block;
+    border: none;
+    outline: none;
+    background: none;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.play-video-btn:hover{
+    background-color: #736357;
+    border-radius: 50%;
+}
+
+.play-video-btn:active{
+    background-color: #736357;
+    border-radius: 50%;
+}
+.svg-autoplay {
+    fill: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #00000021;
+    display: block;
+    text-align: center;
+}
+
+.header-video {
+    color: #ffffff;
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-top: 44px;
+}
+
+.text-video {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    display: block;
+    text-align: center;
+    width: 552px;
+    margin-top: 29px;
+    margin-bottom: 5px;
+}
+
+time{
+    color: #c7b299;
+    font-family: Montserrat;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+}
+/*картинка телефона и текст шестой блок*/
+
+.mobile-img {
+    margin-top: 79px;
+    margin-left: 10%;
+    float: left;
+}
+
+.header-mobile {
+    width: 407px;
+    color: #555555;
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 195px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.text-mobile {
+    width: 657px;
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-top: 40px;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.list-mobile {
+    margin-top: 40px;
+    margin-left: 79px;
+    display: inline-block;
+}
+
+.txt-list-mobile {
+    list-style: none;
+    background: url(../img/04.png) no-repeat 0 50%;
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 32px;
+    padding-left: 49px;
+
+}
+
+/*иконки с цифрами седьмой блок*/
+.small-icon {
+    text-align: center;
+    animation: icon 2s 1 ease;
+}
+
+.small-icon::after {
+    content: "\00A0";
+    /* пробел юникодом */
+    width: 100px;
+    border-bottom: 1px solid #ffffff;
+    margin: 0 auto;
+    display: block;
+    width: 30px;
+    padding: 5px;
+}
+
+.svg-small-icon{
+    fill:#c7b299;
+}
+
+.number-icon {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 48px;
+    line-height: 30px;
+    font-weight: 200;
+    display: block;
+    text-align: center;
+    margin-bottom: 21px;
+    margin-top: 21px
+}
+
+.header-small-icon {
+    color: #c7b299;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 14px;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+}
+
+/*три поста восьмой блок*/
+
+.header-box8{
+    color: #555555;
+    font-family: Raleway;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    margin-top: 81px;
+}
+
+.header-text-box8{
+    color: #8c8c8c;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    margin-bottom: 20px;
+    width: 757px;
+}
+
+.hover-box {
+    display: flex;
+    width: 1170px;
+    flex-wrap: wrap;
+}
+
+.hover-2 {
+    width: 370px;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 30px;
+    transition: background-color 500ms ease;
+    border: 1px solid #f8f8f8;
+
+}
+
+.hover-2:hover {
+    background-color: #362f2d;
+    transition: background-color 500ms ease, background-blend-mode 300ms ease, opacity 6000ms ease;
+}
+
+.hover-2:hover .text-hover-2-img {
+    background-color: #362f2d;
+}
+
+.hover-2:hover .text1-hover-2-img {
+    color: #c7b299;
+}
+
+.hover-2:hover .text2-hover-2-img {
+    color: #fff;
+}
+
+.hover-2:hover .hover-2-img {
+    background-color: #565657;
+    background-blend-mode: multiply;
+    opacity: 0.25;
+
+}
+
+.hover-2:hover .hover-2-data{
+    background-color: #c7b299;
+}
+
+.hover-2:hover .hover-2-mont{
+    background-color: #a48d72;
+}
+
+.data-hover-2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.hover-2-data {
+    display: block;
+    background-color: #363636;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 25px;
+    line-height: 25px;
+    padding: 7px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+}
+
+.hover-2-mont{
+    display: block;
+    background-color: #252525;
+    color: #fff;
+    font-family: Montserrat;
+    font-size: 15px;
+    padding: 2px 7px 2px 7px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+}
+
+.hover-2-img {
+    transition: background-color 500ms ease;
+}
+
+.text-hover-2-img {
+    background-color: #fff;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 27px;
+    transition: background-color 500ms ease;
+}
+
+.text1-hover-2-img {
+    color: #555555;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    line-height: 20px;
+}
+
+.text2-hover-2-img {
+    color: #555555;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 14px;
+    display: block;
+    line-height: 14px;
+}
+
+.link-read-more{
+    text-decoration: none;
+    color: #c7b299;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    display: block;
+}
+
+/*четыре логотипа девятый блок*/
+.image-logo-box-9 {
+    width: 100%;
+    padding: 30px;
+}
+
+/*разные ссылки десятый блок*/
 
 
 /*Заголовки h,p*/
@@ -402,25 +1058,27 @@ p {
 .box-3 {
     background-color: #f4f5f8;
     margin: 0 auto;
-    padding: 48px 15px;
     min-height: 150px;
-    display: flex;
     box-sizing: border-box;
     background: #4E3527;
     background: -webkit-linear-gradient(right, #4E3527, #211B19);
     background: -moz-linear-gradient(right, #4E3527, #211B19);
     background: linear-gradient(to left, #4E3527, #211B19);
+    display: flex;
+    padding: 48px 25px;
 }
 
 .box-4 {
     box-sizing: border-box;
-    min-height: 1000px;
+    min-height: 1050px;
+    padding-bottom: 20px;
 }
 
 .box-5 {
     margin: 0 auto;
-    min-height: 705px;
+    min-height: 470px;
     box-sizing: border-box;
+    position: relative;
 }
 
 .box-6 {
@@ -439,6 +1097,11 @@ p {
     background: -webkit-linear-gradient(right, #4E3527, #211B19);
     background: -moz-linear-gradient(right, #4E3527, #211B19);
     background: linear-gradient(to left, #4E3527, #211B19);
+    display: flex;
+    padding-top: 69px;
+    padding-bottom: 60px;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .box-8 {
@@ -457,6 +1120,9 @@ p {
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-position: center;
+    display: flex;
+    padding: 100px 100px;
+    box-sizing: border-box;
 }
 
 .box-10 {
@@ -466,9 +1132,7 @@ p {
     margin: 0 auto;
 }
 
-
 /*подвал*/
-
 footer {
     display: block;
     background-color: white;
@@ -479,6 +1143,7 @@ footer {
     font-weight: 400;
     color: #333333;
 }
+
 
 .copyright {
     color: #445162;
