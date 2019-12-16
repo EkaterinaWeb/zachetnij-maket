@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зачетный макет</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -41,6 +42,20 @@
                 </li>
                 </ul>
             </nav>
+            <div class="wrapper">
+  <input type="checkbox" id="check-menu">
+  <label for="check-menu">Menu</label>
+  <div class="burger-line first"></div>
+  <div class="burger-line second"></div>
+  <div class="burger-line third"></div>
+  <div class="burger-line fourth"></div>
+  <nav class="mobile-menu">
+    <a href="#" class="mobile-menu-link">Point</a>
+    <a href="#" class="mobile-menu-link">Point</a>
+    <a href="#" class="mobile-menu-link">Point</a>
+    <a href="#" class="mobile-menu-link">Point</a>
+  </nav>
+</div>
         </div>
         <div class="slider-text">
             <p class="slider-unique">Unique and Modern Design</p>
@@ -209,9 +224,9 @@
         <section class="box-5">
             <div class="video-layer">
                <button class="play-video-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.75in" height="0.75in" class="svg-autoplay">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.75in" height="0.75in" class="svg-autoplay">
                     <path d="M31.253,18.653 L48.967,33.415 C49.437,33.807 49.709,34.386 49.709,34.997 C49.709,35.609 49.437,36.188 48.967,36.580 L31.253,51.343 C30.876,51.657 30.407,51.820 29.934,51.820 C29.638,51.820 29.339,51.755 29.060,51.626 C28.337,51.287 27.874,50.559 27.874,49.760 L27.874,20.235 C27.874,19.436 28.337,18.708 29.060,18.370 C29.783,18.030 30.640,18.141 31.253,18.653 ZM31.994,45.362 L44.431,34.997 L31.994,24.633 L31.994,45.362 ZM59.759,59.759 C53.033,66.484 44.026,69.998 34.937,69.998 C29.072,69.999 23.173,68.536 17.831,65.528 C16.839,64.970 16.488,63.713 17.046,62.722 C17.604,61.731 18.860,61.379 19.852,61.938 C31.870,68.703 47.082,66.611 56.845,56.845 C68.892,44.798 68.892,25.197 56.845,13.150 C44.798,1.101 25.196,1.102 13.150,13.150 C1.104,25.197 1.104,44.798 13.150,56.845 C13.955,57.650 13.955,58.954 13.150,59.759 C12.347,60.563 11.042,60.563 10.237,59.759 C-3.416,46.105 -3.416,23.890 10.237,10.236 C23.891,-3.416 46.104,-3.417 59.759,10.236 C73.412,23.890 73.412,46.105 59.759,59.759 Z"/>
-                </svg>
+                    </svg>
                 </button>
                 <span class="header-video">Waxom Video Presentation</span>
                 <span class="text-video">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
@@ -274,55 +289,106 @@
         <section class="box-8">
             <span class="header-box8">Recent Posts.</span>
             <span class="header-text-box8">Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
-                    <div class="hover-box">
-            <div class="hover-2"> 
-                <img src="img/photo10.png" alt="img1" class="hover-2-img" width="370" height="237">
-                <div class="data-hover-2">
-                    <span class="hover-2-data">30</span>
-                    <span class="hover-2-mont">Sep.</span>
+            <div class="hover-box">
+                <div class="hover-2"> 
+                    <img src="img/photo10.png" alt="img1" class="hover-2-img" width="370" height="237">
+                    <div class="data-hover-2">
+                        <span class="hover-2-data">30</span>
+                        <span class="hover-2-mont">Sep.</span>
+                    </div>
+                    <div class="text-hover-2-img">
+                        <span class="text1-hover-2-img">Lorem ipsum dolor sit amet</span>
+                        <span class="text2-hover-2-img">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
+                        <a href="#" class="link-read-more">Read More &#x25b6;</a>
+                    </div>
                 </div>
-                <div class="text-hover-2-img">
-                    <span class="text1-hover-2-img">Lorem ipsum dolor sit amet</span>
-                    <span class="text2-hover-2-img">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
-                    <a href="#" class="link-read-more">Read More &#x25b6;</a>
+                <div class="hover-2">
+                    <img src="img/photo11.png" alt="img2" class="hover-2-img" width="370" height="237">
+                    <div class="data-hover-2">
+                        <span class="hover-2-data">30</span>
+                        <span class="hover-2-mont">Sep.</span>
+                    </div>
+                    <div class="text-hover-2-img">
+                        <span class="text1-hover-2-img">Lorem ipsum dolor sit amet</span>
+                        <span class="text2-hover-2-img">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
+                        <a href="#" class="link-read-more">Read More &#x25b6;</a>
+                    </div>
                 </div>
-            </div>
-            <div class="hover-2">
-                <img src="img/photo11.png" alt="img2" class="hover-2-img" width="370" height="237">
-<div class="data-hover-2">
-                    <span class="hover-2-data">30</span>
-                    <span class="hover-2-mont">Sep.</span>
+                <div class="hover-2">
+                    <img src="img/photo12.png" alt="img3" class="hover-2-img" width="370" height="237">
+                    <div class="data-hover-2">
+                        <span class="hover-2-data">30</span>
+                        <span class="hover-2-mont">Sep.</span>
+                    </div>
+                    <div class="text-hover-2-img">
+                        <span class="text1-hover-2-img">Lorem ipsum dolor sit amet</span>
+                        <span class="text2-hover-2-img">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
+                        <a href="#" class="link-read-more">Read More &#x25b6;</a>
+                    </div>
                 </div>
-                <div class="text-hover-2-img">
-                    <span class="text1-hover-2-img">Lorem ipsum dolor sit amet</span>
-                    <span class="text2-hover-2-img">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
-                    <a href="#" class="link-read-more">Read More &#x25b6;</a>
-                </div>
-            </div>
-            <div class="hover-2">
-                <img src="img/photo12.png" alt="img3" class="hover-2-img" width="370" height="237">
-                <div class="data-hover-2">
-                    <span class="hover-2-data">30</span>
-                    <span class="hover-2-mont">Sep.</span>
-                </div>
-                <div class="text-hover-2-img">
-                    <span class="text1-hover-2-img">Lorem ipsum dolor sit amet</span>
-                    <span class="text2-hover-2-img">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.</span>
-                    <a href="#" class="link-read-more">Read More &#x25b6;</a>
-                </div>
-            </div>
             </div>
         </section>
         <section class="box-9">
-            <img src="img/logo-01.png" alt="123" class="image-logo-box-9" width="210" height="127">
-            <img src="img/logo-02.png" alt="123" class="image-logo-box-9" width="210" height="210">
-            <img src="img/logo-03.png" alt="123" class="image-logo-box-9" width="210" height="130">
-            <img src="img/logo-04.png" alt="123" class="image-logo-box-9" width="210" height="164">
+            <a href="#" class="logo-partner-link"><img src="img/logo-01.png" alt="123" class="image-logo-box-9" width="210" height="127"></a>
+            <a href="#" class="logo-partner-link"><img src="img/logo-02.png" alt="123" class="image-logo-box-9" width="210" height="210"></a>
+            <a href="#" class="logo-partner-link"><img src="img/logo-03.png" alt="123" class="image-logo-box-9" width="210" height="130"></a>
+            <a href="#" class="logo-partner-link"><img src="img/logo-04.png" alt="123" class="image-logo-box-9" width="210" height="164"></a>
          </section>
-        <section class="box-10"> </section>
+        <section class="box-10">
+            <div class="col_1">
+               <a href="index.html" class="logo">
+                    <svg class="logoimg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.65in" height="0.6in"> <path d="M52.873,55.128 L58.125,45.939 L63.377,55.128 L52.873,55.128 ZM46.303,45.172 L56.811,45.172 L51.557,54.359 L46.303,45.172 ZM51.557,34.451 L56.811,43.641 L46.303,43.641 L51.557,34.451 ZM39.738,33.686 L50.243,33.686 L44.990,42.874 L39.738,33.686 ZM44.990,22.967 L50.243,32.154 L39.738,32.154 L44.990,22.967 ZM33.168,22.202 L43.676,22.202 L38.422,31.390 L33.168,22.202 ZM38.422,11.480 L43.676,20.671 L33.168,20.671 L38.422,11.480 ZM26.600,10.713 L37.108,10.713 L31.854,19.905 L26.600,10.713 ZM31.854,-0.006 L37.108,9.184 L26.600,9.184 L31.854,-0.006 ZM20.032,20.671 L25.286,11.480 L30.540,20.671 L20.032,20.671 ZM13.465,32.154 L18.718,22.967 L23.971,32.154 L13.465,32.154 ZM6.897,43.641 L12.151,34.451 L17.404,43.641 L6.897,43.641 ZM0.331,55.128 L5.582,45.939 L10.836,55.128 L0.331,55.128 ZM17.404,45.172 L12.151,54.359 L6.897,45.172 L17.404,45.172 ZM23.971,33.686 L18.718,42.874 L13.465,33.686 L23.971,33.686 ZM30.540,22.202 L25.286,31.390 L20.032,22.202 L30.540,22.202 ZM37.108,55.128 L26.600,55.128 L31.854,45.939 L37.108,55.128 ZM43.676,45.172 L38.422,54.359 L33.168,45.172 L43.676,45.172 ZM50.243,55.128 L39.738,55.128 L44.990,45.939 L50.243,55.128 Z"/>
+                    </svg> 
+                    <span class="logo-txt">Waxom</span>
+                </a>
+                <span class="txt-col_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.</span>
+                <a href="#" class="link-read-more-2">Read More &#x25b6;</a>
+            </div>
+            <div class="col_2">
+                <span class="header-col_2">Recent Post</span>
+                <div class="post-data">
+                    <time class="data">September 08, 2015</time>
+                    <span class="text-data">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+                </div>
+                <div class="post-data">
+                    <time class="data">September 08, 2015</time>
+                    <span class="text-data">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+                </div>
+                <div class="post-data">
+                    <time class="data">September 08, 2015</time>
+                    <span class="text-data">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</span>
+                </div>
+            </div>
+            <div class="col_3">
+                <span class="header-col_3">Our Twitter</span>
+                <div class="post-data">
+                    <span class="text-data">@waxom Cum soluta nobis eleifend option congue nihil imperdiet doming</span>
+                    <time class="data">3 mins ago</time>
+                </div>
+                <div class="post-data">
+                    <span class="text-data">Mirum est #envato notare quam littera gothica, quam nunc putamus parum anteposuerit litterarum</span>
+                    <time class="data">5 hours ago</time>
+                </div>
+                <div class="post-data">
+                    <span class="text-data">Soluta nobis option bit.ly/1Hniso7</span>
+                    <time class="data">20 days ago</time>
+                </div>
+            </div>
+            <div class="col_4">
+                <span class="header-col_4">Dribbble Widget</span>
+                <a href="#"><img src="img/photo13.png" alt="mini" width="139" height="98" class="mini-img"></a>
+                <a href="#"><img src="img/photo14.png" alt="mini" width="139" height="98" class="mini-img"></a>
+                <a href="#"><img src="img/photo15.png" alt="mini" width="139" height="98" class="mini-img"></a>
+                <a href="#"><img src="img/photo16.png" alt="mini" width="139" height="98" class="mini-img"></a>
+            </div>
+        </section>
     </main>
     <footer>
-        <div class="copyright">Copyright &copy; 2015 Waxom | Privacy Policy | FAQ | Support</div>
+        <div class="copyright">Copyright &copy; 2015 Waxom | 
+            <a href="#" class="footer-link">Privacy Policy</a> | 
+            <a href="#" class="footer-link">FAQ</a> | 
+            <a href="#" class="footer-link">Support</a>
+        </div>
         <div class="copyright">Designed by ThemeFire | Only on Envato Market</div>
     </footer>
 </body>
