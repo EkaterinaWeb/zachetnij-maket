@@ -1456,7 +1456,7 @@ label {
     }
 
     .box-5{
-            min-height: 300px;
+            min-height: 400px;
     }
 
     .video-layer{
@@ -1469,7 +1469,7 @@ label {
     left: 0;}
 
     .play-video-btn{
-        margin-top: 15px;
+        margin-top: 40px;
     }
 
     .header-video{
@@ -1483,9 +1483,14 @@ label {
         width: 100%;
     }
     
+    .mobile-img{
+        display: none;
+    }
+    
     .header-mobile{
         margin-top: 10px;
         margin-left: 0;
+        width: 100%
     }
     
     .text-mobile {
